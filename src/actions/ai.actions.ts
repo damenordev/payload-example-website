@@ -1,11 +1,11 @@
 'use server'
 
+import { readDocFile } from '@/utilities/read-doc'
 import { google } from '@ai-sdk/google'
 import { generateText } from 'ai'
-import fs from 'fs'
-import path from 'path'
 
 export const generateTextWithAI = async (prompt: string) => {
+  const data = await readDocFile()
   const result = await generateText({
     model: google('gemini-2.0-flash-exp'),
     messages: [
@@ -18,7 +18,7 @@ export const generateTextWithAI = async (prompt: string) => {
           },
           {
             type: 'file',
-            data: fs.readFileSync(path.resolve(process.cwd(), 'public/doc.pdf')),
+            data,
             mimeType: 'application/pdf',
           },
         ],
