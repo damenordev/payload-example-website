@@ -10,6 +10,7 @@ export const contact: Partial<Page> = {
     {
       blockType: 'formBlock',
       enableIntro: true,
+      // @ts-expect-error allow form to be a string
       form: '{{CONTACT_FORM_ID}}',
       introContent: {
         root: {

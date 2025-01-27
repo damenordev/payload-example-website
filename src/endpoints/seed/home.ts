@@ -23,6 +23,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
         },
       },
     ],
+    // @ts-expect-error allow media to be a string
     media: '{{IMAGE_1}}',
     richText: {
       root: {
@@ -501,6 +502,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
     {
       blockName: 'Media Block',
       blockType: 'mediaBlock',
+      // @ts-expect-error allow media to be a string
       media: '{{IMAGE_2}}',
     },
     {
@@ -657,6 +659,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
   ],
   meta: {
     description: 'An open-source website built with Payload and Next.js.',
+    // @ts-expect-error allow media to be a string
     image: '{{IMAGE_1}}',
     title: 'Payload Website Template',
   },
