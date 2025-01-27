@@ -23,7 +23,7 @@ export const Logo = (props: Props) => {
       fetchPriority={priority}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+      src="https://cdn-667c03b1c1ac1837ccd8cd67.closte.com/wp-content/uploads/2024/10/WMC_Logo.png"
     />
   )
 }
