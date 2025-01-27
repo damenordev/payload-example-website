@@ -18,7 +18,7 @@ export const generateTextWithAI = async (prompt: string) => {
           },
           {
             type: 'file',
-            data: fs.readFileSync(path.resolve(process.cwd(), 'src/actions/doc.pdf')),
+            data: fs.readFileSync(path.resolve(process.cwd(), 'public/doc.pdf')),
             mimeType: 'application/pdf',
           },
         ],
