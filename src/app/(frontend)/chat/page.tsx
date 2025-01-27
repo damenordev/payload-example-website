@@ -35,6 +35,14 @@ export default function ChatPage() {
   //   }
   // }, [])
 
+  const downloadPdf = () => {
+    const pdfUrl = '/doc.pdf'
+    const link = document.createElement('a')
+    link.href = pdfUrl
+    link.download = 'doc-migracion-web.pdf'
+    link.click()
+  }
+
   return (
     <div className='flex flex-col gap-2 items-center justify-center pt-4 h-full w-full max-w-2xl mx-auto'>
       <form className='flex gap-2 w-full' onSubmit={handleSubmit}>
@@ -44,6 +52,10 @@ export default function ChatPage() {
         </button>} */}
         <button className='bg-emerald-400 text-black px-4 py-1 rounded-xl' type="submit">
           {isLoading ? 'Loading...' : 'Send'}
+        </button>
+        {/* Download the pdf */}
+        <button className='bg-blue-400 text-black px-4 py-1 rounded-xl text-nowrap' type="button" onClick={downloadPdf}>
+          Download PDF
         </button>
       </form>
       <div className='text-white/50 flex-1'>{response}</div>
